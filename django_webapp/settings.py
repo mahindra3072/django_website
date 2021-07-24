@@ -30,9 +30,7 @@ SECRET_KEY = config['SECRET_KEY']
 DEBUG = True
 
 ALLOWED_HOSTS = ['13.233.112.75','www.tech4umate.net','tech4umate.net','localhost']
-#hello
-#hello world
-print(hello)
+
 
 # Application definition
 
