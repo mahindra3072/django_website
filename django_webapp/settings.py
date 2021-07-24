@@ -27,10 +27,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = config['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['13.233.112.75','www.tech4umate.net','tech4umate.net']
-
+ALLOWED_HOSTS = ['13.233.112.75','www.tech4umate.net','tech4umate.net','localhost']
+#hello
+#hello world
+print(hello)
 
 # Application definition
 
