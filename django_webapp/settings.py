@@ -32,9 +32,11 @@ DEBUG = True
 ALLOWED_HOSTS = ['13.233.112.75','www.tech4umate.net','tech4umate.net','localhost']
 
 
+
 # Application definition
 
 INSTALLED_APPS = [
+    'imdbratings.apps.ImdbratingsConfig',
     'users.apps.UsersConfig',
     'blog.apps.BlogConfig',
     'crispy_forms',
