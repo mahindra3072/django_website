@@ -1,0 +1,30 @@
+{% extends "blog/base.html"%}
+{% block content %}
+    <h1>Tech4umate Movie Database</h1>
+  <div class="forms">
+   <form  method="POST">
+    {% csrf_token %}
+    
+    {{form}}
+    
+    <input type="submit" name="Search">
+    
+    
+   </form>
+ </div>
+ {% if title %}
+    {% for i in title %}
+
+    {{i}}
+
+    {% endfor%}
+
+    {% for i in year %}
+
+    {{i}}
+    {% endfor%}
+    {% endif%}
+
+   
+  
+{% endblock content%}
