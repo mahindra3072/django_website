@@ -24,8 +24,8 @@ class People(models.Model):
 
 
 class Stars(models.Model):
-    movie_id = models.ManyToManyField(Movies)
-    person_id = models.ManyToManyField(People)
+    movie_id = models.ForeignKey(Movies, on_delete=models.CASCADE,null=False)
+    person_id = models.ForeignKey(People, on_delete=models.CASCADE,null=False)
     
     
 
@@ -35,8 +35,8 @@ class Stars(models.Model):
 
 
 class Directors(models.Model):
-    movie_id = models.ManyToManyField(Movies)
-    person_id = models.ManyToManyField(People)
+    movie_id = models.ForeignKey(Movies, on_delete=models.CASCADE,null=False)
+    person_id = models.ForeignKey(People, on_delete=models.CASCADE,null=False)
     
 
 
