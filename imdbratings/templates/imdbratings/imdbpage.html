@@ -1,5 +1,68 @@
 {% extends "blog/base.html"%}
 {% block content %}
+<head>
+
+   <title>Imdb Ratings</title>
+<style >
+
+body{
+  background-color:#eee;
+  font-family:'Lato',sans-serif;
+  
+}
+
+   .forms{
+    
+
+      
+   }
+   input{
+
+       display: block;
+       padding:0 20px;
+     height:40px;
+     font-size:1em;
+     font-weight:900;
+     text-transform: uppercase;
+     border:3px black solid;
+     border-radius:2px;
+     cursor:pointer;
+     background-color:#f1c40f
+
+
+   }
+
+   input[type= 'submit']:hover{
+  background-color: orange;
+  transition: background-color 1s;
+}
+
+
+   .main-content{
+      
+      width: 300px;
+      height: 100px;
+      border:1px solid #000;
+      border-radius: 3px;
+      margin-left: 100px;
+      box-shadow: 5px 5px #888888;
+
+   }
+   p{
+      margin-bottom: 10px;
+      margin-left: 10px;
+   }
+
+   h4{
+      margin-top: 10px;
+      margin-left: 10px;
+   }
+
+
+  
+
+</style>
+</head>
     <h1>Tech4umate Movie Database</h1>
   <div class="forms">
    <form  method="POST">
@@ -12,11 +75,13 @@
     
    </form>
  </div>
+ 
  {% if info %}
     {% for i in info %}
-
-    {{i.title}}
-    {{i.year}}
+    <div class="main-content">
+    <h4>{{i.title}}</h4>
+      <p> {{i.year}}</p>
+    </div>
 
     {% endfor%}
 
