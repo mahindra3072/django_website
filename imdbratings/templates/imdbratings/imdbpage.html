@@ -12,18 +12,14 @@
     
    </form>
  </div>
- {% if title %}
-    {% for i in title %}
+ {% if info %}
+    {% for i in info %}
 
-    {{i}}
+    {{i.title}}
+    {{i.year}}
 
     {% endfor%}
 
-    {% for i in year %}
-
-    {{i}}
-    {% endfor%}
-    {% endif%}
 
    
   

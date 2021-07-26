@@ -14,14 +14,14 @@ def imdb(request):
                 form= NewSearch(request.POST)
                 if form.is_valid():
                     search = form.cleaned_data["title"].strip()
-                    searchcap =capitalizeWords(search)
+                   
                     y=Movies.objects.filter(title=search)
-                    x=Movies.objects.filter(title=searchcap)
+                    
                     
                     context={
         
-        'rawtxt':y,       
-        'info':x
+             
+        'info':y
         
                     }
                     return render(request,"imdbratings/imdbpage.html",context)
